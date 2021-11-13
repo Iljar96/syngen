@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Новости"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<div class="page page--1 _container">
+			<h1 class="news-title title_2">Новости</h1>
+
+			<main class="page__body">
+
+				<div id="primary-block" class="page__content">
+					<!-- News -->
+					<section class="news">
+						<div class="news__container">
+							<div class="news__articles">
+								<a href="news-single.html">
+									<article class="news__article article-news">
+										<div class="article-news__top">
+											<h2 class="article-news__title">Как организовать производство
+												силикагеля в России
+											</h2>
+											<div class="article-news__img _ibg _scr-item">
+												<img class="_lazy" data-src="img/news/01.jpg" src="img/icons/empty.png"
+													alt="Как организовать производство силикагеля в России">
+											</div>
+										</div>
+										<div class="article-news__body">
+											<div class="article-news__excerpt">
+												<p>Новые решения для производства силикагелей, катализаторов, сорбентов
+													и полифункциональных систем на его основе в России. Получение силикагеля
+													из промышленных отходов. Разработка композитных материалов...</p>
+											</div>
+											<button type="button" class="article-news__btn"><img src="img/icons/next.png" alt="#"></button>
+										</div>
+									</article>
+								</a>
+								<a href="news-single.html">
+									<article class="news__article article-news">
+										<div class="article-news__top">
+											<h2 class="article-news__title">Научный семинар IV-2021</h2>
+											<div class="article-news__img _ibg _scr-item">
+												<img class="_lazy" data-src="img/news/02.jpg" src="img/icons/empty.png"
+													alt="Как организовать производство силикагеля в России">
+											</div>
+										</div>
+										<div class="article-news__body">
+											<div class="article-news__excerpt">
+												<p>Оценка и анализ затрат при разработке проекта химического производства
+													с нуля. Как правильно рассчитать смету на каждом из этапов разработки
+													химического проекта. Учет стоимости оборудования, его установки...</p>
+											</div>
+											<button type="button" class="article-news__btn"><img src="img/icons/next.png" alt="#"></button>
+										</div>
+									</article>
+								</a>
+								<a href="news-single.html">
+									<article class="news__article article-news">
+										<div class="article-news__top">
+											<h2 class="article-news__title">Как организовать производство
+												силикагеля в России
+											</h2>
+											<div class="article-news__img _ibg _scr-item">
+												<img class="_lazy" data-src="img/news/01.jpg" src="img/icons/empty.png"
+													alt="Как организовать производство силикагеля в России">
+											</div>
+										</div>
+										<div class="article-news__body">
+											<div class="article-news__excerpt">
+												<p>Новые решения для производства силикагелей, катализаторов, сорбентов
+													и полифункциональных систем на его основе в России. Получение силикагеля
+													из промышленных отходов. Разработка композитных материалов...</p>
+											</div>
+											<button type="button" class="article-news__btn"><img src="img/icons/next.png" alt="#"></button>
+										</div>
+									</article>
+								</a>
+							</div>
+							<nav class="navigation pagination">
+								<div class="nav-links">
+									<span aria-current="page" class="page-numbers current">1</span>
+									<a class="page-numbers" href="#">2</a>
+									<a class="page-numbers" href="#">3</a>
+									<a class="page-numbers" href="#">4</a>
+									<a class="page-numbers" href="#">5</a>
+								</div>
+							</nav>
+						</div>
+					</section>
+
+				</div>
+
+				<aside id="secondary-block" class="page__sidebar sidebar">
+					<div class="sidebar__mob-top">
+						<div class="sidebar__menu-icon menu-burger">
+							<span class="icon-menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</div>
+						<span>Разделы</span>
+					</div>
+
+					<div class="sidebar__body sidebar__body--news">
+						<section class="widget widget_categories">
+							<h2 class="widget-title">Рубрики:</h2>
+							<nav aria-label="Рубрики">
+								<ul>
+									<li class="cat-item"><a href="#">Новости</a>
+									</li>
+									<li class="cat-item"><a href="#">Статьи</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+
+						<section class="widget widget_popularity">
+							<h2 class="widget-title">Популярные записи:</h2>
+							<nav aria-label="Популярные записи">
+								<ul>
+									<li class="cat-item"><a href="#">Научный семинар IV-2021</a>
+									</li>
+									<li class="cat-item"><a href="#">Как химические лаборатории
+											омолаживают производство</a>
+									</li>
+									<li class="cat-item"><a href="#">Стадии разработки проекта
+											химического производства</a>
+									</li>
+									<li class="cat-item"><a href="#">Ошибки при построении
+											градуировки</a>
+									</li>
+									<li class="cat-item"><a href="#">Результаты МСИ 2021</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+
+						<div class="widget widget_references">
+							<nav aria-label="Полезные ссылки">
+								<ul>
+									<li class="cat-item"><a href="#">Исследования</a></li>
+									<li class="cat-item"><a href="#">Обзоры</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+				</aside>
+
+			</main>
+
+		</div>
+
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

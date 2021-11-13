@@ -1,0 +1,181 @@
+.career {
+	// .career__top
+	&__top {
+		margin: 0px 0px 110px 0px;
+		@include adaptiv-value("margin-bottom", 110, 70, 1);
+	}
+	// .career__title
+	&__title {
+		margin: 0px 0px 65px 0px;
+		@include adaptiv-value("margin-bottom", 65, 25, 1);
+	}
+	// .career__content
+	&__content {
+		column-count: 2;
+		column-gap: 5%;
+		@media (max-width: $md2+px) {
+			column-count: 1;
+			column-gap: 0;
+		}
+		p {
+			margin-bottom: 30px;
+			color: #232323;
+			font-size: 16px;
+			line-height: 24 / 16 * 100%;
+		}
+	}
+}
+.career-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px 0px 150px 0px;
+	@include adaptiv-value("margin-bottom", 150, 80, 1);
+	// .career-gallery__col
+	&__col {
+		flex: 0 0 50%;
+		height: 0;
+		padding: 0px 0px 28.13% 0px;
+		@media (max-width: 575px) {
+			flex: 0 0 100%;
+			padding: 0px 0px 56.19% 0px;
+		}
+	}
+}
+
+/* Vacancy */
+.vacancy {
+	margin: 0 0 140px;
+	@include adaptiv-value("margin-bottom", 200, 130, 1);
+	// .vacancy__container
+	// .vacancy__title
+	&__title {
+		margin: 0px 0px 65px 0px;
+		@include adaptiv-value("margin-bottom", 65, 30, 1);
+	}
+}
+
+.vacancy-item {
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 60px 0px;
+	@include adaptiv-value("margin-bottom", 60, 45, 1);
+	// .vacancy-item__title
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 111px;
+		padding: 30px 55px;
+		color: #232323;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 47 / 24 * 100%;
+		background-color: #ebeef3;
+		border: 1px solid #dddfe3;
+		border-bottom: none;
+		@include adaptiv-value("line-height", 47, 22, 1);
+		@include adaptiv-value("padding-left", 55, 22, 1);
+		@include adaptiv-value("padding-right", 55, 22, 1);
+		@include adaptiv-value("padding-top", 30, 25, 1);
+		@include adaptiv-value("padding-bottom", 30, 25, 1);
+		@include adaptiv-value("font-size", 24, 16, 1);
+		cursor: pointer;
+		transition: background-color 0.5s ease 0.3s;
+		&._active {
+			background: transparent;
+			transition: background-color 0.3s ease 0s;
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 30px;
+			flex: 0 0 30px;
+			margin-left: 10px;
+			height: 16px;
+			@include adaptiv-value("flex-basis", 30, 20, 1);
+			@include adaptiv-value("width", 30, 20, 1);
+			@include adaptiv-value("height", 16, 11, 1);
+			background: url("../img/icons/arrow-bottom.png") center no-repeat;
+			background-size: contain;
+		}
+	}
+	// .vacancy-item__vody
+	&__body {
+		padding: 0px 55px 70px;
+		border: 1px solid #dddfe3;
+		border-top: none;
+		@include adaptiv-value("padding-left", 55, 22, 1);
+		@include adaptiv-value("padding-right", 55, 22, 1);
+		@include adaptiv-value("padding-bottom", 70, 10, 1);
+	}
+	&__top {
+		margin: 10px 0px 80px 0px;
+		@include adaptiv-value("margin-bottom", 80, 40, 1);
+	}
+	// .vacancy-item__list
+	&__list {
+		ul {
+			margin: 0px 0px 70px 0px;
+			@include adaptiv-value("margin-bottom", 70, 50, 1);
+		}
+	}
+	// .vacancy-item__subtitle
+	&__subtitle {
+		padding: 0px 0px 20px 0px;
+		border-bottom: 1px solid #dddfe3;
+	}
+	&__btn-group {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@media (max-width: 600px) {
+			justify-content: center;
+		}
+	}
+	&__btn-fill {
+		white-space: nowrap;
+		margin: 0px 65px 30px 0;
+		@media (max-width: 600px) {
+			margin-right: 0;
+		}
+	}
+	&__btn-send {
+		display: inline-block;
+		margin: 0px 0 30px 0;
+		color: #19a5df;
+		font-size: 18px;
+		font-weight: 700;
+		transition: color 0.3s ease 0s;
+		white-space: nowrap;
+		@include adaptiv-value("font-size", 18, 16, 1);
+		position: relative;
+		@media (max-width: 600px) {
+			width: 100%;
+			text-align: center;
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -7px;
+			left: 0;
+			background: #19a5df;
+			opacity: 0;
+			visibility: hidden;
+			transition: visibility 0.3s ease 0s, opacity 0.3s ease 0s;
+		}
+		@media (min-width: 600px) and (any-hover: hover) {
+			&:hover {
+				&::before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Корзина"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<div class="page page--2">
+
+			<main class="page__body">
+
+				<div id="primary-block" class="page__content">
+
+					<!-- Cart -->
+					<section class="cart-block">
+						<div class="cart-block__container _container">
+							<h1 class="cart-block__title title_2">Корзина</h1>
+							<form class="cart-block__form" action="#">
+
+								<table class="shop_table">
+									<thead>
+										<tr>
+											<th class="product-thumbnail">&nbsp;</th>
+											<th class="product-name">&nbsp;</th>
+											<th class="product-price">Цена</th>
+											<th class="product-quantity">Кол-во</th>
+											<th class="product-subtotal">Сумма</th>
+											<th class="product-remove">&nbsp;</th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr>
+											<td class="product-thumbnail">
+												<a href="product.html" class="_ibg">
+													<img src="img/product/01.png" alt="DreamTaq Green DNA Polymerase">
+												</a>
+											</td>
+
+											<td class="product-name">
+												<a href="product.html">DreamTaq Green DNA Polymerase</a>
+											</td>
+
+											<td class="product-price">
+												<span class="woocommerce-Price-amount amount">
+													<span class="_amount-digits">30000</span>
+													<span class="woocommerce-Price-currencySymbol">руб.</span></span>
+											</td>
+
+											<td class="product-quantity">
+												<div class="quantity">
+													<div class="quantity__button quantity__button_minus">-</div>
+													<div class="quantity__input">
+														<input autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<div class="quantity__button quantity__button_plus">+</div>
+												</div>
+											</td>
+
+											<td class="product-subtotal">
+												<span class="woocommerce-Price-amount amount">
+													<span class="_amount-digits">30000</span>
+													<span class="woocommerce-Price-currencySymbol">руб.</span></span>
+											</td>
+
+											<td class="product-remove">
+												<a href="">+</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="product-thumbnail">
+												<a href="product.html" class="_ibg">
+													<img src="img/product/01.png" alt="DreamTaq Green DNA Polymerase">
+												</a>
+											</td>
+
+											<td class="product-name">
+												<a href="product.html">DreamTaq Green DNA Polymerase</a>
+											</td>
+
+											<td class="product-price">
+												<span class="woocommerce-Price-amount amount">
+													<span class="_amount-digits">30000</span>
+													<span class="woocommerce-Price-currencySymbol">руб.</span></span>
+											</td>
+
+											<td class="product-quantity">
+												<div class="quantity">
+													<div class="quantity__button quantity__button_minus">-</div>
+													<div class="quantity__input">
+														<input autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<div class="quantity__button quantity__button_plus">+</div>
+												</div>
+											</td>
+
+											<td class="product-subtotal">
+												<span class="woocommerce-Price-amount amount">
+													<span class="_amount-digits">30000</span>
+													<span class="woocommerce-Price-currencySymbol">руб.</span></span>
+											</td>
+
+											<td class="product-remove">
+												<a href="">+</a>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+
+								<div class="cart-block__bottom">
+									<div class="cart-block__total">
+										Итого:
+										<span class="woocommerce-Price-amount amount"><span class="_amount-digits">60000</span>
+											<span class="woocommerce-Price-currencySymbol">руб.</span></span>
+									</div>
+									<a href="checkout.html" class="cart-block__btn btn btn--2">Оформить заказ <span>></span></a>
+								</div>
+
+							</form>
+						</div>
+
+					</section>
+
+				</div>
+			</main>
+
+		</div>
+
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

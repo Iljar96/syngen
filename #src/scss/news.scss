@@ -1,0 +1,304 @@
+// .news__title
+.news-title {
+	flex: 0 0 100%;
+	margin: 0px 0px 77px 0px;
+	@include adaptiv-value("margin-bottom", 80, 28, 0);
+	@media (min-width: 1201px) {
+		@include adaptiv-value("margin-bottom", 80, -10, 0);
+	}
+}
+.news {
+	// .news__articles
+	&__articles {
+		padding-bottom: 13px;
+		width: 100%;
+		> a {
+			display: block;
+			color: #232323;
+			@media (any-hover: hover) {
+				&:hover {
+					img {
+						transform: scale(1.1);
+					}
+					&::after {
+						transform: translate(0, 19%);
+					}
+				}
+			}
+		}
+	}
+}
+.article-news {
+	width: 100%;
+	margin: 0px 0px 65px 0px;
+	@include adaptiv-value("margin-bottom", 65, 52, 1);
+	@media (min-width: 1201px) {
+		@include adaptiv-value("margin-bottom", 65, 0, 1);
+	}
+	// .article-news__top
+	&__top {
+		width: 100%;
+		position: relative;
+		@media (max-width: $md4+px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__img {
+		display: block;
+		width: 100%;
+		height: 0;
+		padding: 0px 0px 49.1%;
+		overflow: hidden;
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 27px 0px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 51%, rgba(0, 0, 0, 0.7) 100%);
+			transform: translate(0, 0);
+			transition: transform 0.3s ease 0s;
+		}
+		img {
+			z-index: -1;
+			transition: transform 0.3s ease 0s;
+		}
+	}
+	// .article-news__title
+	&__title {
+		position: absolute;
+		left: 60px;
+		right: 60px;
+		bottom: 48px;
+		color: #ffffff;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 40 / 32 * 100%;
+		z-index: 2;
+		@include adaptiv-value("font-size", 32, 18, 1);
+		@media (min-width: 1201px) {
+			@include adaptiv-value("left", 56, -10, 1);
+			@include adaptiv-value("right", 56, -10, 1);
+			@include adaptiv-value("bottom", 48, -30, 1);
+			@include adaptiv-value("font-size", 32, 12, 1);
+		}
+		@media (max-width: 1200px) {
+			left: 30px;
+			right: 30px;
+			bottom: 30px;
+		}
+		@media (max-width: $md4+px) {
+			position: static;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			order: 2;
+			color: #232323;
+		}
+		a {
+			color: inherit;
+		}
+	}
+	// .article-news__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 35px 40px 47px 56px;
+		border: 2px solid #ebeef3;
+		border-top: none;
+		@media (min-width: 1201px) {
+			@include adaptiv-value("padding-left", 56, -10, 1);
+			@include adaptiv-value("padding-right", 35, -10, 1);
+			@include adaptiv-value("padding-top", 35, 5, 1);
+			@include adaptiv-value("padding-bottom", 47, 5, 1);
+		}
+		@media (max-width: 1200px) {
+			padding: 30px 30px 40px;
+		}
+		@media (max-width: $md4+px) {
+			border-left: none;
+			border-right: none;
+			padding: 22px 0px 37px 0px;
+		}
+	}
+	// .article-news__excerpt
+	&__excerpt {
+		margin: 0px 70px 0px 0px;
+		font-size: 15px;
+		line-height: 24 / 15 * 100%;
+		font-weight: 400;
+		@include adaptiv-value("font-size", 15, 12, 1);
+		@media (min-width: 1201px) {
+			@include adaptiv-value("margin-right", 70, -10, 1);
+		}
+		@media (max-width: $md4+px) {
+			margin-right: 0;
+		}
+	}
+	// .article-news__btn
+	&__btn {
+		height: 100%;
+		transition: transform 0.3s ease 0s;
+		.ie & {
+			background: transparent;
+			width: 60px;
+		}
+		img {
+			width: 23px;
+			@include adaptiv-value("width", 23, 13, 1);
+		}
+		@media (max-width: $md4+px) {
+			display: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+.sidebar {
+	// .sidebar__top
+	&__mob-top {
+		display: none;
+		color: #232323;
+		font-size: 17px;
+		font-weight: 700;
+		@media (max-width: $md2+px) {
+			display: flex;
+			align-items: center;
+			padding: 19px 26px;
+			background-color: #ebeef3;
+			cursor: pointer;
+			margin: 0px 0px 35px 0px;
+		}
+		.menu-burger {
+			@media (max-width: $md2+px) {
+				display: flex;
+				flex: 0 0 21px;
+				margin: 0px 19px 0px 0px;
+			}
+			@media (max-width: $md4+px) {
+				order: 0;
+			}
+		}
+		.icon-menu {
+			@media (max-width: $md2+px) {
+				display: block;
+				flex: 0 0 21px;
+				height: 16px;
+			}
+		}
+	}
+}
+
+/* News-single */
+.news--return {
+	margin: 0px 0px 63px 0px;
+	color: #adaeaf;
+	font-size: 16px;
+	font-weight: 300;
+	text-decoration: underline;
+	color: #adaeaf;
+	font-size: 16px;
+	font-weight: 300;
+	a {
+		color: inherit;
+	}
+	@include adaptiv-value("margin-bottom", 63, 32, 0);
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.article-news.article-news--single {
+	margin: 0px 0px 143px 0px;
+	@include adaptiv-value("margin-bottom", 143, 20, 0);
+	@media (max-width: 1200px) {
+		@include adaptiv-value("margin-bottom", 143, 72, 1);
+	}
+	// .article-news__img
+	.article-news__img {
+		pointer-events: none;
+		&::after {
+			transform: translate(0, 0);
+		}
+	}
+	// .article-news__body
+	.article-news__body {
+		display: block;
+		@media (max-width: $md2+px) {
+			padding-bottom: 0;
+		}
+		@media (max-width: $md4+px) {
+			border-bottom: none;
+		}
+	}
+}
+.breadcrumbs {
+	position: absolute;
+	left: 60px;
+	right: 60px;
+	bottom: 48px;
+	z-index: 2;
+	@media (min-width: 1201px) {
+		@include adaptiv-value("left", 56, -10, 1);
+		@include adaptiv-value("right", 56, -10, 1);
+		@include adaptiv-value("bottom", 48, -30, 1);
+	}
+	@media (max-width: 1200px) {
+		left: 30px;
+		right: 30px;
+		bottom: 30px;
+	}
+	@media (max-width: $md4+px) {
+		position: static;
+		left: auto;
+		right: auto;
+		bottom: auto;
+	}
+	a,
+	&__sep {
+		margin: 0px 10px 15px 0px;
+		color: #ffffff;
+		font-size: 12px;
+		@media (max-width: $md4+px) {
+			color: #232323;
+		}
+	}
+	&__title {
+		margin-top: 25px;
+		color: #ffffff;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 40 / 32 * 100%;
+		@include adaptiv-value("font-size", 32, 24, 1);
+		@media (min-width: 1201px) {
+			@include adaptiv-value("font-size", 32, 12, 1);
+		}
+		@media (max-width: $md4+px) {
+			color: #232323;
+		}
+	}
+	a {
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .breadcrumbs__sep
+	&__sep {
+		font-size: 14px;
+	}
+}

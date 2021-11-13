@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Оформление заказа"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<div class="page page--1 _container">
+
+			<main class="page__body">
+
+				<div id="primary-block" class="page__content">
+
+					<section class="checkout">
+						<h1 class="checkout__title title_3">Оформление заказа</h1>
+
+						<div class="checkout__client-info client-info">
+							<div class="client-info__buyer">
+
+								<form action="#" class="client-info__form">
+
+									<div class="client-info__input input-wrapper _placeholder-parent">
+										<label for="name" class=" _placeholder">
+											<span>Имя</span>
+										</label>
+										<input id="name" class="input" type="text" name="name">
+									</div>
+									<div class="client-info__input input-wrapper _placeholder-parent">
+										<label for="company" class=" _placeholder">
+											<span>Компания</span>
+										</label>
+										<input id="company" class="input" type="text" name="company">
+									</div>
+
+									<div class="client-info__group input-group">
+										<div class="client-info__input input-wrapper _placeholder-parent">
+											<label for="email" class=" _placeholder">
+												<span>E-mail</span>
+											</label>
+											<input id="email" class="input" type="email" name="email">
+										</div>
+										<div class="client-info__input input-wrapper _placeholder-parent">
+											<label for="phone" class=" _placeholder">
+												<span>Номер телефона</span>
+											</label>
+											<input id="phone" class="input" type="tel" name="phone">
+										</div>
+									</div>
+
+									<div class="client-info__radio">
+										<div class="options">
+											<label class="options__item">
+												<input class="options__input" checked type="radio" value="1" name="form[option]">
+												<span class="options__text"><span>Оплата при получении
+													</span></span>
+											</label>
+										</div>
+									</div>
+
+									<div class="client-info__input input-wrapper">
+										<select name="form[]" class="form">
+											<option value="1" selected="selected">Россия</option>
+											<option value="2">Украина</option>
+											<option value="3">Беларусь</option>
+											<option value="4">Казахстан</option>
+										</select>
+									</div>
+
+									<div class="client-info__input input-wrapper _placeholder-parent">
+										<label for="region" class=" _placeholder">
+											<span>Введите область / округ *</span>
+										</label>
+										<input id="region" class="input" type="text" name="region">
+									</div>
+									<div class="client-info__input input-wrapper _placeholder-parent">
+										<label for="city" class=" _placeholder">
+											<span>Введите город / населенный пункт *</span>
+										</label>
+										<input id="city" class="input" type="text" name="city">
+									</div>
+									<div class="client-info__input client-info__input--add_address input-wrapper _placeholder-parent">
+										<label for="add_address" class=" _placeholder">
+											<span>Название улицы и номер дома/квартиры/офиса *</span>
+										</label>
+										<input id="add_address" class="input" type="text" name="add_address">
+									</div>
+
+
+									<div class="client-info__btn-group btn-group">
+										<p>Нажимая на кнопку, вы соглашаетесь
+											c <a href="#">политикой конфиденциальности</a></p>
+										<button type="submit" class="client-info__btn btn btn--2">Подтверждаю заказ</button>
+									</div>
+
+								</form>
+
+							</div>
+
+							<div class="client-info__delivery">
+								<h3 class="client-info__title">Условия доставки:</h3>
+								<div class="client-info__text-block">
+									<p>Доставка продукции по Москве</p>
+									<ul>
+										<li>- От 15 000 руб. - бесплатная доставка</li>
+										<li>- До 15 000 руб. - 650 руб.</li>
+									</ul>
+								</div>
+								<div class="client-info__text-block">
+									<p>Доставка продукции по России осуществляется курьерским службами в течении 1-4 дней. Стоимость
+										междугородней доставки рассчитывается индивидуально для каждого заказа.</p>
+								</div>
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+
+			</main>
+
+		</div>
+
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

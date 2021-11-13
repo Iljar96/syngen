@@ -1,0 +1,190 @@
+.footer {
+	padding: 90px 0 67px;
+	@include adaptiv-value("padding-top", 90, 51, 1);
+	@include adaptiv-value("padding-bottom", 67, 60, 1);
+	background-color: #ebeef3;
+	// .footer__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			align-items: stretch;
+		}
+		@media (max-width: 575px) {
+			flex-wrap: wrap;
+		}
+	}
+	// .footer__col-1
+	&__col-1 {
+		@media (max-width: $md2+px) {
+			flex: 0 0 auto;
+			margin: 0px 10px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			align-self: flex-start;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		margin: 0px 10px 0px 0px;
+		img {
+			max-width: 100%;
+			max-height: 74px;
+			@include adaptiv-value-to("max-height", 70, 58, 1201);
+			@media (max-width: $md2+px) {
+				max-height: 73px;
+				@include adaptiv-value("max-width", 132, 112, 1);
+			}
+		}
+	}
+	&__col-2,
+	&__col-3 {
+		display: inline-flex;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			align-items: stretch;
+			flex-wrap: wrap;
+			> * {
+				flex: 0 0 100%;
+			}
+		}
+	}
+	// .footer__col-2
+	&__col-2 {
+		@media (max-width: $md2+px) {
+			max-width: 200px;
+		}
+		@media (max-width: 575px) {
+			order: 2;
+			flex: 0 0 100%;
+		}
+		@media (max-width: 575px) {
+			max-width: 100%;
+			margin-top: 41px;
+		}
+	}
+	// .footer__copy
+	&__copy {
+		margin: 0px 75px 0px 0px;
+		color: #969696;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 26 / 14 * 100%;
+
+		@include adaptiv-value-to("margin-right", 60, 10, 1201);
+		@include adaptiv-value-to("font-size", 14, 10.5, 1201);
+		@media (max-width: 1200px) {
+			margin-right: 10px;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 40px 0px;
+		}
+		@media (max-width: $md3+px) {
+			@include adaptiv-value("font-size", 14, 12, 1);
+		}
+		@media (max-width: 575px) {
+			margin: 0px 0px 20px 0px;
+			p {
+				display: inline-block;
+			}
+		}
+	}
+	// .footer__links
+	&__links {
+		font-family: "Open Sans";
+		font-size: 13px;
+		font-weight: 300;
+
+		@include adaptiv-value-to("font-size", 13, 10.5, 1201);
+		a {
+			color: #232323;
+			text-decoration: underline;
+		}
+	}
+	// .footer__privacy
+	&__privacy {
+		margin: 0px 0px 18px 0px;
+		display: block;
+	}
+	// .footer__create
+	// .footer__col-3
+	&__col-3 {
+		@media (max-width: $md2+px) {
+			max-width: 260px;
+			text-align: right;
+		}
+		@media (max-width: 575px) {
+			order: 1;
+		}
+		@media (max-width: 575px) {
+			max-width: 100%;
+		}
+	}
+	// .footer__address
+	&__address {
+		margin: 0px 38px 0px 0px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 31 / 16 * 100%;
+		@media (max-width: $md2+px) {
+			br {
+				display: none;
+			}
+		}
+		@media (max-width: $md2+px) {
+			margin: 0 0 10px;
+		}
+		@media (max-width: $md3+px) {
+			@include adaptiv-value("font-size", 16, 14, 1);
+		}
+
+		@include adaptiv-value-to("font-size", 16, 10.5, 1201);
+		@include adaptiv-value-to("margin-right", 31.5, 10, 1201);
+		@media (max-width: 1200px) {
+			margin-right: 10px;
+		}
+	}
+	// .footer__phone
+	&__phone {
+		display: block;
+		color: #232323;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 40 / 22 * 100%;
+		transition: color 0.3s ease 0s;
+		text-align: right;
+
+		@include adaptiv-value-to("font-size", 20.5, 13.5, 1201);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #19a5df;
+			}
+		}
+		@media (max-width: $md3+px) {
+			@include adaptiv-value("font-size", 22, 18, 1);
+		}
+	}
+	// .footer__mail
+	&__mail {
+		display: block;
+		color: #232323;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 40 / 16 * 100%;
+		text-align: right;
+		transition: color 0.3s ease 0s;
+
+		font-size: 14px;
+		@include adaptiv-value-to("font-size", 15.5, 12.5, 1201);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #19a5df;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+//====================================================================================================

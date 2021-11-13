@@ -1,0 +1,194 @@
+//====================================================================================================
+.popup {
+	-webkit-overflow-scrolling: touch;
+	z-index: 100;
+	padding: 30px 10px;
+	position: fixed;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	&::before {
+		content: "";
+		background-color: rgba(0, 0, 0, 0.9);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 0.8s ease 0s;
+	}
+	&.show {
+		visibility: visible;
+		overflow: auto;
+		&::before {
+			opacity: 1;
+		}
+		.popup__body {
+			transform: scale(1);
+		}
+	}
+	&._active {
+		overflow: auto;
+		visibility: visible;
+		&::before {
+			opacity: 1;
+		}
+		.popup__body {
+			transition: all 0.3s ease 0.2s;
+			transform: scale(1);
+		}
+	}
+	// .popup__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .popup__body
+	&__body {
+		transform: scale(0);
+		transition: all 0.3s ease 0s;
+		background-color: #fff;
+		padding: 90px 53px;
+		width: 100%;
+		max-width: 516px;
+		@include adaptiv-value("padding-top", 90, 50, 1);
+		@include adaptiv-value("padding-bottom", 90, 50, 1);
+		@include adaptiv-value("padding-left", 53, 15, 1);
+		@include adaptiv-value("padding-right", 53, 15, 1);
+	}
+	// .popup__close
+	&__close {
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 34px;
+		right: 16px;
+		cursor: pointer;
+		z-index: 30;
+		background: url("../img/icons/close.svg") 0 0 no-repeat;
+		background-size: 19px;
+		@include adaptiv-value("top", 34, 15, 1);
+		@include adaptiv-value("right", 16, 15, 1);
+	}
+	// .popup__title
+	&__title {
+		margin: 0px 0px 35px 0px;
+		color: #232323;
+		font-size: 31px;
+		font-weight: 700;
+		line-height: 36 / 32 * 100%;
+		@include adaptiv-value("margin-bottom", 35, 22, 1);
+		@include adaptiv-value-to("font-size", 31, 24, 768);
+		@include adaptiv-value-to("font-size", 31, 24, 1201);
+		@media (max-width: $md3+px) {
+			@include adaptiv-value("font-size", 31, 20, 1);
+		}
+		@media (max-width: $md4+px) {
+			line-height: 1.3;
+		}
+	}
+	// .popup__input
+	&__input {
+		margin-bottom: 16px;
+	}
+	&__btn-group {
+		margin-top: 40px;
+		@include adaptiv-value("margin-top", 40, 15, 1);
+	}
+	.popup__input-group--upload {
+		margin: 54px 0px 110px 0px;
+		@include adaptiv-value("margin-top", 54, 20, 1);
+		@include adaptiv-value("margin-bottom", 110, 30, 1);
+	}
+	&__upload-file,
+	&__upload-info {
+		flex: 0 0 calc(50% - 7.5px);
+		margin: 0px 0px 15px 0px;
+		@media (max-width: 575px) {
+			flex: 0 0 100%;
+		}
+	}
+	&__upload-info {
+		color: #989fa0;
+		font-family: "Open Sans";
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 23 / 13 * 100%;
+	}
+	// .popup__btn
+	.popup__btn {
+		white-space: nowrap;
+	}
+	&__input-group {
+		.input-wrapper {
+			flex: 0 0 calc(50% - 7.5px);
+			@media (max-width: 575px) {
+				flex: 0 0 100%;
+			}
+		}
+	}
+	.input-textarea {
+		min-height: 80px;
+	}
+}
+
+.popup_resume-send .popup__body,
+.popup_resume-fillout .popup__body {
+	max-width: 710px;
+	padding: 90px 90px;
+	@include adaptiv-value("padding-left", 90, 15, 1);
+	@include adaptiv-value("padding-right", 90, 15, 1);
+	@include adaptiv-value("padding-top", 90, 50, 1);
+	@include adaptiv-value("padding-bottom", 90, 50, 1);
+	@media (max-width: 600px) {
+		justify-content: center;
+	}
+}
+.popup_resume-fillout {
+	.popup__input-group {
+		margin-bottom: 20px;
+		@include adaptiv-value("margin-bottom", 20, 10, 1);
+	}
+	.input-textarea {
+		margin-bottom: 24px;
+		@include adaptiv-value("margin-bottom", 24, 15, 1);
+	}
+}
+
+.popup_consultation {
+	.popup__btn-group {
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 40px;
+		@include adaptiv-value("margin-top", 40, 15, 1);
+		p {
+			margin: 0 !important;
+			@media (max-width: $md4+px) {
+				margin: 0 auto !important;
+			}
+		}
+	}
+	.popup__btn {
+		@media (max-width: 600px) {
+			display: inline-flex;
+			width: auto;
+		}
+		@media (max-width: $md4+px) {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+//====================================================================================================
+//====================================================================================================

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Амплификация и клонирование фрагментов ДНК (кДНК)</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20211018183116">
+	<link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap&_v=20211018183116" rel="stylesheet">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__wrapper">
+		<div class="header__container _container">
+			<div class="header__body">
+				<div class="header__main">
+					<a href="index.html" class="header__logo">
+						<img src="img/logo/logo.png?_v=1634571076346" alt="Logo">
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul data-spollers="767,max" class="menu__list">
+								<li class="menu-item menu-item-has-children">
+									<a href="#" class="menu__link" data-spoller>Продукция</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="products.html">ДНК-полимеразы</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Ревертазы</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Готовые смеси</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Буферы и компоненты</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Ферменты прочие</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Реагенты для секвенирования</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="#" class="menu__link" data-spoller>Услуги</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="service.html">Амплификация и клонирование</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Секвенирование днк</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Синтез генов</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Сайт-направленный мутагенез</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Экспрессия белков в escherichia coli</a>
+										</li>
+										<li class="menu-item">
+											<a href="">Генетические исследования</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="" class="menu__link" data-spoller>О компании</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="production.html">Производство</a>
+										</li>
+										<li class="menu-item">
+											<a href="career.html">Карьера</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a href="news.html" class="menu__link">Новости</a>
+								</li>
+								<li class="menu-item">
+									<a href="contacts.html" class="menu__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<button type="button" class="menu-burger">
+					<span class="icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					Меню
+				</button>
+				<div class="header__actions actions-header actions-header--mob">
+					<a href="" class="actions-header__item actions-header__item_user">
+						<svg version="1.1" id="Capa_1_1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+							style="enable-background:new 0 0 512 512;" xml:space="preserve">
+							<g>
+								<g>
+									<path d="M256,288.389c-153.837,0-238.56,72.776-238.56,204.925c0,10.321,8.365,18.686,18.686,18.686h439.747
+			c10.321,0,18.686-8.365,18.686-18.686C494.56,361.172,409.837,288.389,256,288.389z M55.492,474.628
+			c7.35-98.806,74.713-148.866,200.508-148.866s193.159,50.06,200.515,148.866H55.492z" />
+								</g>
+							</g>
+							<g>
+								<g>
+									<path d="M256,0c-70.665,0-123.951,54.358-123.951,126.437c0,74.19,55.604,134.54,123.951,134.54s123.951-60.35,123.951-134.534
+			C379.951,54.358,326.665,0,256,0z M256,223.611c-47.743,0-86.579-43.589-86.579-97.168c0-51.611,36.413-89.071,86.579-89.071
+			c49.363,0,86.579,38.288,86.579,89.071C342.579,180.022,303.743,223.611,256,223.611z" />
+								</g>
+							</g>
+						</svg>
+					</a>
+					<div class="actions-header__item cart-header">
+						<a href="cart.html" class="cart-header__icon">
+							<svg version="1.1" id="Capa_2_1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.997 511.997"
+								style="enable-background:new 0 0 511.997 511.997;" xml:space="preserve">
+								<g>
+									<g>
+										<path d="M405.387,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+										S440.588,362.612,405.387,362.612z M405.387,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+										c14.083,0,25.536,11.453,25.536,25.536S419.47,451.988,405.387,451.988z" />
+									</g>
+								</g>
+								<g>
+									<g>
+										<path
+											d="M507.927,115.875c-3.626-4.641-9.187-7.348-15.079-7.348H118.22l-17.237-72.12c-2.062-8.618-9.768-14.702-18.629-14.702
+										H19.152C8.574,21.704,0,30.278,0,40.856s8.574,19.152,19.152,19.152h48.085l62.244,260.443
+										c2.062,8.625,9.768,14.702,18.629,14.702h298.135c8.804,0,16.477-6.001,18.59-14.543l46.604-188.329
+										C512.849,126.562,511.553,120.516,507.927,115.875z M431.261,296.85H163.227l-35.853-150.019h341.003L431.261,296.85z" />
+									</g>
+								</g>
+								<g>
+									<g>
+										<path d="M173.646,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+										S208.847,362.612,173.646,362.612z M173.646,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+										s25.536,11.453,25.536,25.536S187.729,451.988,173.646,451.988z" />
+									</g>
+								</g>
+							</svg>
+							<span>1</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__actions actions-header">
+				<a href="" class="actions-header__item actions-header__item_user">
+					<svg version="1.1" id="Capa_1_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<g>
+							<g>
+								<path d="M256,288.389c-153.837,0-238.56,72.776-238.56,204.925c0,10.321,8.365,18.686,18.686,18.686h439.747
+			c10.321,0,18.686-8.365,18.686-18.686C494.56,361.172,409.837,288.389,256,288.389z M55.492,474.628
+			c7.35-98.806,74.713-148.866,200.508-148.866s193.159,50.06,200.515,148.866H55.492z" />
+							</g>
+						</g>
+						<g>
+							<g>
+								<path d="M256,0c-70.665,0-123.951,54.358-123.951,126.437c0,74.19,55.604,134.54,123.951,134.54s123.951-60.35,123.951-134.534
+			C379.951,54.358,326.665,0,256,0z M256,223.611c-47.743,0-86.579-43.589-86.579-97.168c0-51.611,36.413-89.071,86.579-89.071
+			c49.363,0,86.579,38.288,86.579,89.071C342.579,180.022,303.743,223.611,256,223.611z" />
+							</g>
+						</g>
+					</svg>
+				</a>
+				<div class="actions-header__item cart-header">
+					<a href="#" class="cart-header__icon">
+						<svg version="1.1" id="Capa_2_2" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.997 511.997"
+							style="enable-background:new 0 0 511.997 511.997;" xml:space="preserve">
+							<g>
+								<g>
+									<path d="M405.387,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+							 S440.588,362.612,405.387,362.612z M405.387,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+							 c14.083,0,25.536,11.453,25.536,25.536S419.47,451.988,405.387,451.988z" />
+								</g>
+							</g>
+							<g>
+								<g>
+									<path
+										d="M507.927,115.875c-3.626-4.641-9.187-7.348-15.079-7.348H118.22l-17.237-72.12c-2.062-8.618-9.768-14.702-18.629-14.702
+							 H19.152C8.574,21.704,0,30.278,0,40.856s8.574,19.152,19.152,19.152h48.085l62.244,260.443
+							 c2.062,8.625,9.768,14.702,18.629,14.702h298.135c8.804,0,16.477-6.001,18.59-14.543l46.604-188.329
+							 C512.849,126.562,511.553,120.516,507.927,115.875z M431.261,296.85H163.227l-35.853-150.019h341.003L431.261,296.85z" />
+								</g>
+							</g>
+							<g>
+								<g>
+									<path d="M173.646,362.612c-35.202,0-63.84,28.639-63.84,63.84s28.639,63.84,63.84,63.84s63.84-28.639,63.84-63.84
+							 S208.847,362.612,173.646,362.612z M173.646,451.988c-14.083,0-25.536-11.453-25.536-25.536s11.453-25.536,25.536-25.536
+							 s25.536,11.453,25.536,25.536S187.729,451.988,173.646,451.988z" />
+								</g>
+							</g>
+						</svg>
+						<span>1</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+		<div class="page">
+			<main class="page__body">
+
+				<div id="primary-block" class="page__content">
+					<!-- Intro -->
+					<section class="intro intro-service">
+						<div class="intro__container _container">
+							<div class="intro__body">
+								<div class="intro__content">
+									<div class="intro__return">
+										<a href="service.html">Амплификация и клонирование</a>
+										<span class="intro__sep">/</span>
+									</div>
+									<h1 class="intro__title">Амплификация и клонирование фрагментов ДНК (кДНК)</h1>
+									<div><a href="#about-service" class="intro__catalog _goto">
+											<span class="intro__catalog-title">Подробнее</span>
+										</a></div>
+								</div>
+								<div class="intro__slider _scr-item _ibg">
+									<img class="_lazy" data-src="img/service/service-intro.jpg?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346"
+										alt="Амплификация и клонирование фрагментов ДНК (кДНК)">
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- About-service -->
+					<section class="about-service">
+						<div class="about-service__container _container">
+							<h2 class="about-service__title title_3">Об услуге</h2>
+
+							<div class="about-service__body">
+								<p>Услуга включает <strong>клонирование предоставленного заказчиком фрагмента ДНК</strong> (ампликона) в
+									стандартный вектор для ТА-клонирования, отбор методом ПЦР не менее 3 клонов, содержащих плазмиду с
+									целевым фрагментом ДНК, секвенирование вставки (дополнительная услуга), выделение плазмидной ДНК (5-10
+									мкг).
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Materials -->
+					<section class="materials">
+						<div class="materials__container _container">
+							<h2 class="materials__title title_3">Материалы, предоставляемые заказчиком:</h2>
+							<ul class="materials__items">
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__count">1/</div>
+										<div class="materials__text">
+											<p>Биологический материал (ДНК, РНК, ткань)</p>
+										</div>
+									</div>
+								</li>
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__count">2/</div>
+										<div class="materials__text">
+											<p>Последовательность ДНК в формате FASTA или в текстовом виде</p>
+										</div>
+									</div>
+								</li>
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__count">3/</div>
+										<div class="materials__text">
+											<p>Целевая плазмида и ее последовательность (если заказчик предоставляет свой вектор)</p>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+
+
+						</div>
+
+					</section>
+
+					<!-- Consist -->
+					<section class="intro intro-consist">
+						<div class="intro__container _container">
+							<div class="intro__body">
+								<div class="intro__content _content">
+									<h2 class="intro__consist-title title_3">Состав услуги:</h2>
+									<ul class="intro__list">
+										<li class="intro__item">Дизайн и синтез праймеров для амплификации целевой последовательности ДНК
+										</li>
+										<li class="intro__item">Выделение ДНК (выделение РНК и синтез кДНК оплачиваются отдельно)</li>
+										<li class="intro__item">Амплификация целевого фрагмента ДНК</li>
+										<li class="intro__item">Отбор рекомбинантных клонов, содержащих целевую вставку, методом ПЦР и
+											секвенированием</li>
+										<li class="intro__item">Выделение плазмидной ДНК с валидированной целевой последовательностью
+											(3-5мкг)</li>
+									</ul>
+								</div>
+								<div class="intro__slider _scr-item _ibg">
+									<img class="_lazy" data-src="img/service/consist.jpg?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346"
+										alt="Амплификация и клонирование фрагментов ДНК (кДНК)">
+									<div class="intro__consist-info consist-info">
+										<div class="consist-info__text">
+											<div class="consist-info__top">Более</div>
+											<div class="consist-info__middle">700</div>
+											<div class="consist-info__bottom">амплификаций провели
+												за 2020 год</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Result -->
+					<section class="materials materials--result">
+						<div class="materials__container _container">
+							<h2 class="materials__title title_3">Результат выполненных работ:</h2>
+							<ul class="materials__items">
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__icon _scr-item">
+											<img class="_lazy" data-src="img/service/single-01.png?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346" alt="">
+										</div>
+										<div class="materials__text">
+											<p>Результаты секвенирования (отчет и хроматограммы полученных сиквенсов)</p>
+										</div>
+									</div>
+								</li>
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__icon _scr-item">
+											<img class="_lazy" data-src="img/service/single-02.png?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346" alt="">
+										</div>
+										<div class="materials__text">
+											<p>Праймеры для амплификации целевого фрагмента ДНК (при необходимости)</p>
+										</div>
+									</div>
+								</li>
+								<li class="materials__item">
+									<div class="materials__content">
+										<div class="materials__icon _scr-item">
+											<img class="_lazy" data-src="img/service/single-03.png?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346" alt="">
+										</div>
+										<div class="materials__text">
+											<p>Генетическая конструкция, содержащая целевую последовательность ДНК</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Prices -->
+					<section class="prices">
+						<div class="prices__container _container">
+							<h2 class="prices__title title_3">Цены и сроки выполнения работ:</h2>
+							<table class="prices__table">
+								<thead>
+									<tr>
+										<th>Артикул</th>
+										<th class="prices__table-name">Услуга</th>
+										<th>Кол-во ампликонов</th>
+										<th>Цена</th>
+										<th>Срок выполнения</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Код: ES00002</td>
+										<td rowspan="2">Амплификация
+											и клонирование
+											фрагментов ДНК
+											(кДНК)</td>
+										<td>До 2000</td>
+										<td>25 000*</td>
+										<td>От 15 рабочих дней</td>
+									</tr>
+									<tr>
+										<td>Код: ES00002</td>
+										<td>2000-3000</td>
+										<td>45 000*</td>
+										<td>От 20 рабочих дней</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- Mob-table -->
+							<div class="prices__table-mob mob-table">
+								<!-- Row-header -->
+								<div class="mob-table__row mob-table__row--header">
+									<div class="mob-table__name">Услуга</div>
+									<div class="mob-table__count">Кол-во
+										ампликотов</div>
+									<div class="mob-table__price">Цена</div>
+									<div class="mob-table__terms">Сроки
+										выполнения</div>
+								</div>
+								<!-- Row -->
+								<div class="mob-table__row">
+									<div class="mob-table__name">
+										<div>Амплификация и клонирование фрагментов ДНК (кДНК)</div>
+										<div class="mob-table__sku">Код: ES00002</div>
+									</div>
+									<div class="mob-table__count"><span class="mob-table__head">Кол-во ампликонов: </span>До 2000</div>
+									<div class="mob-table__price"><span class="mob-table__head">Цена: </span>25 000*</div>
+									<div class="mob-table__terms"><span class="mob-table__head">Сроки: </span>От 20 рабочих дней</div>
+									<div class="mob-table__sku mob-table__sku--mob">Код: ES00002
+									</div>
+								</div>
+								<!-- Row -->
+								<div class="mob-table__row">
+									<div class="mob-table__name">
+										<div>Амплификация и клонирование фрагментов ДНК (кДНК)</div>
+										<div class="mob-table__sku">Код: ES00002</div>
+									</div>
+									<div class="mob-table__count"><span class="mob-table__head">Кол-во ампликонов: </span>До 2000</div>
+									<div class="mob-table__price"><span class="mob-table__head">Цена: </span>25 000*</div>
+									<div class="mob-table__terms"><span class="mob-table__head">Сроки: </span>От 20 рабочих дней</div>
+									<div class="mob-table__sku mob-table__sku--mob">Код: ES00002
+									</div>
+								</div>
+
+							</div>
+							<div class="prices__info">* - Секвенирование целевого фрагмента ДНК в трех отобранных клонах входит в
+								стоимость услуги. Выделение тотальной РНК из предоставленного образца ткани и синтез кДНК оплачиваются
+								отдельно.</div>
+						</div>
+
+					</section>
+
+					<!-- Additional services -->
+					<section class="prices">
+						<div class="prices__container _container">
+							<h2 class="prices__title title_3">Дополнительные услуги:</h2>
+							<table class="prices__table">
+								<thead>
+									<tr>
+										<th>Артикул</th>
+										<th class="prices__table-name">Услуга</th>
+										<th>Цена</th>
+										<th>Срок выполнения</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Код: ES00002</td>
+										<td>Выделение тотальной РНК и получение кДНК</td>
+										<td>15 000</td>
+										<td>Входит в срок выполнения основных работ</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- Mob-table -->
+							<div class="prices__table-mob mob-table">
+								<!-- Row-header -->
+								<div class="mob-table__row mob-table__row--header">
+									<div class="mob-table__name">Услуга</div>
+									<div class="mob-table__price">Цена</div>
+									<div class="mob-table__terms">Сроки
+										выполнения</div>
+								</div>
+								<!-- Row -->
+								<div class="mob-table__row">
+									<div class="mob-table__name">
+										<div>Выделение тотальной РНК и получение кДНК</div>
+										<div class="mob-table__sku">Код: ES00002</div>
+									</div>
+									<div class="mob-table__price"><span class="mob-table__head">Цена: </span>15 000</div>
+									<div class="mob-table__terms">Входит в срок выполнения основных работ</div>
+									<div class="mob-table__sku mob-table__sku--mob">Код: ES00002
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- Application -->
+					<div class="application">
+						<div class="application__container _container">
+							Для оформления заказа на клонирование ампликонов
+							необходимо <a href="#">заполнить заявку</a>
+						</div>
+					</div>
+
+
+				</div>
+
+			</main>
+
+		</div>
+
+		<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__col-1">
+			<a href="index.html" class="footer__logo _scr-item">
+				<img class="_lazy" data-src="img/logo/logo_gray.png?_v=1634571076346" src="img/icons/empty.png?_v=1634571076346" alt="Logo">
+			</a>
+		</div>
+		<div class="footer__col-2">
+			<div class="footer__copy">
+				<p>АО СинГен © 2020</p>
+				<p>Все права защищены</p>
+			</div>
+
+			<div class="footer__links">
+				<a href="#" class="footer__privacy">Политика конфиденциальности</a>
+				<div class="footer__create">
+					<div>Создание сайта: <a href="#">kompanets.pro</a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__col-3">
+			<div class="footer__address" data-da=".footer__col-2,575,first">АО СинГен, 115162,<br>
+				г. Москва, ул. Шухова, 14с9, пом. 7 </div>
+
+			<div class="footer__contacts">
+				<a href="tel:+74993806003" class="footer__phone">+7 (499) 380 60 03</a>
+				<a href="mailto:info@syngen.ru" class="footer__mail">info@syngen.ru</a>
+			</div>
+		</div>
+
+	</div>
+</footer>
+	</div>
+	<div class="popup popup_consultation _hidden">
+	<div class="popup__content">
+		<div class="popup__body">
+			<h2 class="popup__title">Есть вопросы?<br>
+				Получите консультацию</h2>
+			<form action="#">
+				<div class="popup__input input-wrapper">
+					<input class="input" type="text" name="name" placeholder="Введите ваше имя">
+				</div>
+				<div class="popup__input input-wrapper">
+					<input class="input" type="email" name="email" placeholder="E-mail для ответа">
+				</div>
+				<div class="popup__input input-wrapper">
+					<input class="input" type="tel" name="tel" placeholder="Номер телефона">
+				</div>
+				<div class="popup__btn-group btn-group">
+					<button type="submit" class="popup__btn btn btn--2">Отправить заявку</button>
+					<p>Нажимая на кнопку, вы соглашаетесь
+						c <a href="policy.html">политикой конфиденциальности</a></p>
+				</div>
+
+			</form>
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_resume-send _hidden">
+	<div class="popup__content">
+		<div class="popup__body">
+			<h2 class="popup__title">Отклик на вакансию</h2>
+			<form action="#">
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="send_name" class=" _placeholder">
+						<span>Ваше имя</span>
+					</label>
+					<input id="send_name" class="input" type="text" name="send_name">
+				</div>
+				<div class="popup__input-group input-group">
+					<div class="popup__input input-wrapper _placeholder-parent">
+						<label for="send_email" class=" _placeholder">
+							<span>E-mail</span>
+						</label>
+						<input id="send_email" class="input" type="email" name="send_email">
+					</div>
+					<div class="popup__input input-wrapper _placeholder-parent">
+						<label for="send_tel" class=" _placeholder">
+							<span>Номер телефона</span>
+						</label>
+						<input id="send_tel" class="input" type="tel" name="send_tel">
+					</div>
+				</div>
+
+				<div class="popup__input-group popup__input-group--upload input-group">
+					<div class="popup__upload-file upload-file">
+						<div class="upload-file__wrapper">
+							<input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+								accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip" multiple>
+							<label class="upload-file__label" for="upload-file__input_1">
+								<img class="upload-file__icon" src="img/icons/upload.png?_v=1634571076346" alt="Прикрепить файл">
+								<span class="upload-file__text">Прикрепить файл</span>
+							</label>
+						</div>
+					</div>
+					<div class="popup__upload-info">
+						<p>Поддерживаются форматы:
+							doc, docx, rtf, txt, odt, pdf (1 Мб максимум).</p>
+					</div>
+
+				</div>
+
+				<div class="popup__btn-group btn-group">
+					<p>Нажимая на кнопку, вы соглашаетесь
+						c <a href="policy.html">политикой конфиденциальности</a></p>
+					<button type="submit" class="popup__btn btn">Отправить резюме</button>
+				</div>
+			</form>
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+
+<div class="popup popup_resume-fillout _hidden">
+	<div class="popup__content">
+		<div class="popup__body">
+			<h2 class="popup__title">Отправить резюме</h2>
+			<form action="#">
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="fillout_name" class=" _placeholder">
+						<span>Ваше имя</span>
+					</label>
+					<input id="fillout_name" class="input" type="text" name="fillout_name">
+				</div>
+				<div class="popup__input-group input-group">
+					<div class="popup__input input-wrapper _placeholder-parent">
+						<label for="fillout_email" class=" _placeholder">
+							<span>E-mail</span>
+						</label>
+						<input id="fillout_email" class="input" type="email" name="fillout_email">
+					</div>
+					<div class="popup__input input-wrapper _placeholder-parent">
+						<label for="fillout_tel" class=" _placeholder">
+							<span>Номер телефона</span>
+						</label>
+						<input id="fillout_tel" class="input" type="tel" name="fillout_tel">
+					</div>
+				</div>
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="experience" class=" _placeholder">
+						<span>Опишите ваш опыт работы, умения и навыки</span>
+					</label>
+					<textarea id="experience" class="input input-textarea" name="experience"></textarea>
+				</div>
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="bio" class=" _placeholder">
+						<span>Укажите ваш возраст, пол, семейное положение</span>
+					</label>
+					<textarea id="bio" class="input input-textarea" name="bio"></textarea>
+				</div>
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="education" class=" _placeholder">
+						<span>Укажите образование</span>
+					</label>
+					<textarea id="education" class="input input-textarea" name="education"></textarea>
+				</div>
+				<div class="popup__input input-wrapper _placeholder-parent">
+					<label for="letter" class=" _placeholder">
+						<span>Сопроводительное письмо</span>
+					</label>
+					<textarea id="letter" class="input input-textarea" name="letter"></textarea>
+				</div>
+
+				<div class="popup__btn-group btn-group">
+					<p>Нажимая на кнопку, вы соглашаетесь
+						c <a href="policy.html">политикой конфиденциальности</a></p>
+					<button type="submit" class="popup__btn btn">Отправить резюме</button>
+				</div>
+			</form>
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+	<script src="js/vendors.min.js?_v=20211018183116"></script>
+<script src="js/app.min.js?_v=20211018183116"></script>
+</body>
+
+</html>

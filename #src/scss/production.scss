@@ -1,0 +1,109 @@
+.production-title {
+	margin-bottom: 22px;
+	@include adaptiv-value("margin-bottom", 22, 30, 1);
+}
+.production {
+	margin-bottom: 156px;
+	@include adaptiv-value("margin-bottom", 156, 40, 1);
+	@media (max-width: 1200px) {
+		@include adaptiv-value("margin-bottom", 156, 90, 1);
+	}
+}
+.wp-block-columns {
+	display: flex;
+	margin-bottom: 1.75em;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-top: 0 !important;
+	@media (min-width: 782px) {
+		flex-wrap: nowrap;
+	}
+	@media (min-width: 482px) {
+		margin-bottom: 30px;
+	}
+	@media (max-width: $md2+px) {
+		flex-wrap: wrap;
+	}
+	> * {
+		&:last-child {
+			figure,
+			img {
+				@media (max-width: $md2+px) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&:nth-of-type(2n) {
+		.wp-block-column {
+			&:last-child {
+				padding-left: 3em;
+			}
+		}
+	}
+	&:nth-of-type(2n + 1) {
+		.wp-block-column {
+			&:first-child {
+				padding-right: 3em;
+			}
+		}
+	}
+}
+.wp-block-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+	width: 100%;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	figure,
+	img {
+		width: 100%;
+		height: auto;
+		@media (min-width: $md2+px) {
+			margin-bottom: 0;
+		}
+	}
+	@media (min-width: $md2+px) {
+		flex: 0 0 50%;
+		margin-bottom: 0;
+	}
+	@media (max-width: $md2+px) {
+		flex: 0 0 100%;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+	p {
+		@include adaptiv-value("font-size", 16, 8.5, 1);
+		@include adaptiv-value("margin-bottom", 25, 0, 1);
+		@media (max-width: 1200px) {
+			@include adaptiv-value("margin-bottom", 25, 10, 1);
+			font-size: 15px;
+		}
+		@media (max-width: $md2+px) {
+			@include adaptiv-value("margin-bottom", 25, 15, 1);
+			font-size: 15px;
+		}
+		&:last-child {
+			@media (min-width: $md2+px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.production__single-content {
+	.wp-block-columns,
+	> p {
+		margin-bottom: 87px;
+		@include adaptiv-value("font-size", 16, 8.5, 1);
+		@include adaptiv-value("margin-bottom", 87, 0, 1);
+		@media (max-width: 1200px) {
+			@include adaptiv-value("margin-bottom", 87, 45, 1);
+			font-size: 15px;
+		}
+	}
+}
